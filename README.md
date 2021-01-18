@@ -295,6 +295,9 @@ vi /u02/deployments/Source/etc/conf/ogg/repl1.prm
 
 Replicat repl1
 USERID ggadmin@demosydney_high, PASSWORD PassW0rd_#21
+dboptions suppresstriggers
+reperror (0001, discard)
+reperror (1403, discard)
 map goldengateusr.*, target goldengateusr.*;
 
 /u01/app/ogg/oracle19/bin/adminclient
@@ -338,4 +341,4 @@ dboptions suppresstriggers
 reperror (0001, discard)
 reperror (1403, discard)
 
-This tells the target database to skip ORA-0001 and ORA-1403 and avoid the logical conflicts. This is not a production grade way of doing this, ideally looping scenarios should be handled by having proper column mappings
+This tells the target database to skip ORA-0001 and ORA-1403 and avoid the logical conflicts. This is not a production grade way of doing this, ideally CDR scenarios should be handled by having COMPARECOLS / RESOLVECONFLICTS option, not AUTO-CDR. There are special settings you need to enable for active-active to be successful (like EXCLUDETAG), so make sure you follow the documentation, or one of the many white papers / blog sites devoted to Active-Active replication with OGG.
