@@ -4,7 +4,7 @@
 
 1. Go to console check Goldengate VM IP
 2. Login to VM
-ssh -i "/Users/shadab/Downloads/Oracle Content/Keys/mydemo_vcn.priv" -o ServerAliveInterval=30 opc@168.138.110.19
+ssh -i "ssh-key" -o ServerAliveInterval=30 opc@<public-ip>
 
  cat ogg-credentials.json
 {"username": "oggadmin", "credential": "XLl.dgWbff9asvfL"}
@@ -37,13 +37,13 @@ oci db autonomous-database generate-wallet \
  --region us-ashburn-1 \
  --profile Shadab-Migrate
  
-ssh -i ~/.ssh/mydemo_vcn.priv opc@168.138.110.19
+ssh -i ~/.ssh/mydemo_vcn.priv opc@<public-ip>
 
-scp -i ~/.ssh/mydemo_vcn.priv /home/opc/.oci/wallet/Wallet_DemoSYD.zip opc@168.138.110.19:/u02/deployments/Source/etc
+scp -i ~/.ssh/mydemo_vcn.priv /home/opc/.oci/wallet/Wallet_DemoSYD.zip opc@<public-ip>:/u02/deployments/Source/etc
 
-scp -i ~/.ssh/mydemo_vcn.priv /home/opc/.oci/wallet/Wallet_DemoIAD.zip opc@168.138.110.19:/u02/deployments/Target/etc
+scp -i ~/.ssh/mydemo_vcn.priv /home/opc/.oci/wallet/Wallet_DemoIAD.zip opc@<public-ip>:/u02/deployments/Target/etc
 
-ssh -i ~/.ssh/mydemo_vcn.priv opc@168.138.110.19
+ssh -i ~/.ssh/mydemo_vcn.priv opc@<public-ip>
 
 cd /u02/deployments/Source/etc
 
