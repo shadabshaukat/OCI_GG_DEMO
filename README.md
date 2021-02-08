@@ -24,7 +24,7 @@ cd /home/opc/.oci/wallet
 oci db autonomous-database generate-wallet \
  --autonomous-database-id ocid1.autonomousdatabase.oc1.ap-sydney-1.abzxsljrdttammj5i7en2qyav546cjjr5jvqdvqyod66r6kinqoqg4cm562a \
  --file /home/opc/.oci/wallet/Wallet_DemoSYD.zip \
- --password RAbbithole1234#_ \
+ --password *********#_ \
   --region ap-sydney-1 \
  --profile Shadab-Migrate
  
@@ -33,7 +33,7 @@ oci db autonomous-database generate-wallet \
  oci db autonomous-database generate-wallet \
  --autonomous-database-id ocid1.autonomousdatabase.oc1.iad.abuwcljtrdhi7q5htfou34qkhk53fnuooi5xwgrhljpwut2cpbggwmsb22ka \
  --file /home/opc/.oci/wallet/Wallet_DemoIAD.zip \
- --password RAbbithole1234#_ \
+ --password **********#_ \
  --region us-ashburn-1 \
  --profile Shadab-Migrate
  
