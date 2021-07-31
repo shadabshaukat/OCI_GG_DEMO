@@ -342,3 +342,7 @@ reperror (0001, discard)
 reperror (1403, discard)
 
 This tells the target database to skip ORA-0001 and ORA-1403 and avoid the logical conflicts. This is not a production grade way of doing this, ideally CDR scenarios should be handled by having COMPARECOLS / RESOLVECONFLICTS option, not AUTO-CDR. There are special settings you need to enable for active-active to be successful (like EXCLUDETAG), so make sure you follow the documentation, or one of the many white papers / blog sites devoted to Active-Active replication with OGG.
+
+ # Disclaimer
+
+This is a personal repository. Any code, views or opinions represented here are personal and belong solely to me and do not represent those of people, institutions or organizations that I may or may not be associated with in professional or personal capacity, unless explicitly stated
